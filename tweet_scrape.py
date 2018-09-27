@@ -6,10 +6,10 @@ import sys
 import pandas as pd
 from json_parse import write_json_tweets
 def load_api():
-    consumer_key='zphAaOrxbH7SLu4FvMYiFKVvU'
-    consumer_secret='4uEgU5I68ihXay2cbKvA3nuQcESsqBKZlABxKutYqMDwfi5Ppm'
-    access_token='544166504-a9mU4JVqmLc7jfd2rw9OSGEaOHhGmLCtBBNCTHa1'
-    access_secret='AibEm6eK7XZl6V759reCfQWbPXiTnN4mWGRI1uboDGjB3'
+    consumer_key=''
+    consumer_secret=''
+    access_token=''
+    access_secret=''
 
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
@@ -70,7 +70,6 @@ def main():
 
         tweets= tweet_search(api, search_phrase, max_tweets)
         if tweets:
-            filename=search_phrase
             write_tweets(filename,tweets)
             write_json_tweets(filename,tweets)
 
