@@ -63,8 +63,6 @@ def main():
     for search_phrase in q:
 
         print('Search phrase =', search_phrase)
-        name = search_phrase.split()[0]
-
         api = load_api()
 
 
